@@ -1,0 +1,93 @@
+:root{
+    --page-1-color:orchid;
+    --page-2-color:indianred;
+    --page-3-color:cadetblue;
+    --page-4-color:mediumvioletred;
+    --animatespeed:2s
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.4;
+    color: azure;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#page-1{
+    background-color: var(--page-1-color);
+}
+#page-2{
+    background-color: var(--page-2-color);
+}
+#page-3{
+    background-color: var(--page-3-color) ;
+}
+#page-4{
+    background-color: var(--page-4-color);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.page h1{
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 10px;
+}
+
+.page p{
+    font-size: 18px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: azure;
+    color: dimgrey;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    font-size: 17px;
+    margin: 10px 0;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover,.btn-dark{
+    background-color: dimgrey;
+    color: azure;
+}
+
+.btn-dark:hover{
+    background-color: azure;
+    color: dimgray;
+}
+
+#page-1 h1{
+    transform: translateY(-1200px);
+    animation: heading var(--animatespeed) forwards ease-in;
+}
+
+@keyframes heading{
+    to{
+        transform: translateY(0);
+    }
+}
+
+#page-1 p{
+    transform: translateX(-1800px);
+    animation: para var(--animatespeed) forwards ease-in 1.5s;
+}
+
+@keyframes para{
+    to{
+        transform: translateX(0);
+    }
+}
